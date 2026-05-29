@@ -60,3 +60,15 @@ jobs:
 
       - name: Build project
         run: npm run build
+  deploy:
+    needs: [test, BuildProject]
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the code
+        uses: actions/checkout@v4
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Deploying project
+        run: echo "the project is deploying"

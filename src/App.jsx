@@ -1,6 +1,6 @@
 import MainContent from "./components/MainContent";
 import logo from "./assets/images/logo.png";
-// this is the man
+// this is the sjs
 function App() {
   return (
     <>
